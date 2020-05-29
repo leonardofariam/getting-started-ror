@@ -1,0 +1,47 @@
+<!-- <div class="column">
+	<article class="media box">
+		<figure class="media-left">
+			<p class="image is-64x64">
+				<img src="https://screenshots.gamebanana.com/img/ico/sprays/super_mario_spray.png"></img>
+			</p>		
+		</figure>
+		<div class="media-content">
+			<strong>Leonardo Matos</strong>
+			<small>@leonardo-matos</small>
+		</div>
+	</article>
+</div> -->
+
+<% @rooms.each do | room | %>
+	<div class="box">
+		<article class="media">
+		<div class="media-left">
+		<figure class="image is-64x64">
+			<img src="https://screenshots.gamebanana.com/img/ico/sprays/super_mario_spray.png"></img>
+		</figure>
+		</div>
+		<div class="media-content">
+			<strong>Leonardo Matos</strong>
+			<small>@leonardo-matos</small>
+			<p><%= room.room %></p>
+			<tbody>
+      			<tr>
+        			<td><%= link_to 'Show', room %></td>
+        			<td><%= link_to 'Edit', edit_room_path(room) %></td>
+        			<td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      			</tr>
+    			
+  				</tbody>
+			</table>
+		</div>
+	</article>
+	</div>
+<% end %>
+<br>
+
+<figure class="image is-64x64">
+<%= link_to (image_tag("https://upload.wikimedia.org/wikipedia/commons/f/f6/Icon_Einstein_256x256.png")), new_room_path %>
+</figure>
+
+
+<!-- https://upload.wikimedia.org/wikipedia/commons/f/f6/Icon_Einstein_256x256.png -->
