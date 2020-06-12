@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :rooms
+  devise_for :users
+  #resources :presentation
+  #resources 'presentation'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'rooms#index'
+  root to: 'register#home-page'
 end
